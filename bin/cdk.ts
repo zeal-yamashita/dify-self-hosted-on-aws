@@ -36,7 +36,7 @@ if ((props.useCloudFront ?? true) && (props.domainName || props.allowedIPv4Cidrs
   });
 }
 
-new DifyOnAwsStack(app, 'DifyOnAwsStack', {
+new DifyOnAwsStack(app, 'DifyOnAwsStackZeal', {
   env: { region: props.awsRegion, account: props.awsAccount },
   crossRegionReferences: true,
   ...props,
