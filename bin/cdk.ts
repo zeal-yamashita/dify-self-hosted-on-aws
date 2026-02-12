@@ -23,6 +23,9 @@ export const props: EnvironmentProps = {
 
   // ■ Docker HubではなくECRを利用する (../scripts/copy-to-ecr.tsを使います)
   //customEcrRepositoryName: 'dify-images',
+  // ■ ドメイン設定
+  domainName: 'dify-test-poc.com',
+  subDomain: 'ennet',
 
     // ■ ネットワーク・セキュリティ設定
   // CloudFrontを使わず、ALBで直接通信します（シンプル構成）
