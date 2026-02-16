@@ -6,7 +6,7 @@ import { UsEast1Stack } from '../lib/us-east-1-stack';
 import { EnvironmentProps } from '../lib/environment-props';
 
 export const props: EnvironmentProps = {
-  awsRegion: 'us-east-1',
+  awsRegion: 'ap-northeast-1',
   awsAccount: process.env.CDK_DEFAULT_ACCOUNT!,
   // Set Dify version
   difyImageTag: '1.13.0',
@@ -24,8 +24,8 @@ export const props: EnvironmentProps = {
   // ■ Docker HubではなくECRを利用する (../scripts/copy-to-ecr.tsを使います)
   //customEcrRepositoryName: 'dify-images',
   // ■ ドメイン設定
-  domainName: 'dify-test-poc.com',
-  subDomain: 'ennet',
+  domainName: 'ennetworkflow.com',
+  subDomain: 'dify',
 
     // ■ ネットワーク・セキュリティ設定
   // CloudFrontを使わず、ALBで直接通信します（シンプル構成）
@@ -38,6 +38,8 @@ export const props: EnvironmentProps = {
 
   // ■ その他
   setupEmail: true, // SESによるメール送信設定（DNS重複がない前提）
+
+  // ■ 追加環境変数
   additionalEnvironmentVariables: [
   {
     key: 'UPLOAD_FILE_SIZE_LIMIT',
